@@ -1,6 +1,5 @@
 package com.example.primexsystems.demoproject.home;
 
-import android.icu.lang.UCharacter;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -10,7 +9,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.example.primexsystems.demoproject.R;
-import com.example.primexsystems.demoproject.home.adapter.FourContentAdapter;
+import com.example.primexsystems.demoproject.home.adapter.ContentAdapter;
 import com.example.primexsystems.demoproject.home.model.NewsItem;
 
 import java.util.ArrayList;
@@ -22,7 +21,7 @@ public class HomeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.temps);
 
-        initializeFields();
+       // initializeFields();
     }
 
     /**
@@ -98,8 +97,8 @@ public class HomeActivity extends AppCompatActivity {
 
 
 
-        ArrayList<NewsItem> newsItemArrayList = prepareData();
-        FourContentAdapter listAdapter = new FourContentAdapter(newsItemArrayList);
+/*        ArrayList<NewsItem> newsItemArrayList = prepareData();
+        ContentAdapter listAdapter = new ContentAdapter(newsItemArrayList);
         LinearLayoutManager layoutManager
                 = new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.VERTICAL, false);
 
@@ -116,7 +115,7 @@ public class HomeActivity extends AppCompatActivity {
         recyclerviewListSix.setAdapter(listAdapter);
         recyclerviewListSix.setLayoutManager(layoutManager);
         recyclerviewListRecent.setAdapter(listAdapter);
-        recyclerviewListRecent.setLayoutManager(layoutManager);
+        recyclerviewListRecent.setLayoutManager(layoutManager);*/
 
 
     }

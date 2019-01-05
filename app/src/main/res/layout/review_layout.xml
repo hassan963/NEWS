@@ -12,7 +12,7 @@
         android:id="@+id/review_headerTV"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="অনলাইন ভোট"
+        android:text="@string/vote"
         style="@style/HeaderText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"/>
@@ -34,7 +34,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginTop="8dp"
-        android:text="নতুন বছরে শেয়ারবাজারে সুদিন ফিরবে বলে মনে করেন কি?"
+        android:text="@string/topic"
         android:textSize="16sp"
         android:textColor="#0e0e0e"
         app:layout_constraintEnd_toEndOf="parent"

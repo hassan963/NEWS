@@ -26,7 +26,7 @@
             android:layout_marginLeft="8dp"
             android:layout_marginBottom="2dp"
             android:background="@color/colorAccent"
-            android:text="জাতীয়"
+            android:text="@string/jatio"
             android:padding="2dp"
             android:textColor="#fff"
             app:layout_constrainedWidth="true"
@@ -40,7 +40,7 @@
             android:id="@+id/title_image_TV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="বঙ্গবন্ধুর প্রতিকৃতিতে শ্রদ্ধা জানাল নবনির্বাচিত এমপিরা"
+            android:text="@string/title"
             app:layout_constrainedWidth="true"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
@@ -80,7 +80,7 @@
             android:layout_marginLeft="8dp"
             android:layout_marginBottom="2dp"
             android:background="@color/colorAccent"
-            android:text="জাতীয়"
+            android:text="@string/jatio"
             android:padding="2dp"
             android:textColor="#fff"
             app:layout_constrainedWidth="true"
@@ -96,7 +96,7 @@
             android:layout_height="wrap_content"
             android:padding="4dp"
             android:textSize="16sp"
-            android:text="বঙ্গবন্ধুর প্রতিকৃতিতে শ্রদ্ধা জানাল নবনির্বাচিত এমপিরা"
+            android:text="@string/title"
             app:layout_constrainedWidth="true"
             app:layout_constraintHorizontal_bias="0.0"
             android:layout_marginStart="8dp"
@@ -114,7 +114,7 @@
             android:layout_marginLeft="8dp"
             android:layout_marginBottom="2dp"
             android:background="@color/colorAccent"
-            android:text="জাতীয়"
+            android:text="@string/jatio"
             android:padding="2dp"
             android:textColor="#fff"
             app:layout_constrainedWidth="true"
@@ -130,7 +130,7 @@
             android:layout_height="wrap_content"
             android:padding="4dp"
             android:textSize="16sp"
-            android:text="বঙ্গবন্ধুর প্রতিকৃতিতে শ্রদ্ধা জানাল নবনির্বাচিত এমপিরা"
+            android:text="@string/title"
             app:layout_constrainedWidth="true"
             android:layout_marginStart="8dp"
             android:layout_marginLeft="8dp"
@@ -142,9 +142,8 @@
 
         <TextView
             android:id="@+id/categoryOne_TV"
-            android:text="সর্বশেষ"
+            android:text="@string/jatio"
             android:layout_width="0dp"
-            android:textSize="24sp"
             android:padding="8dp"
             android:textColor="#fff"
             android:layout_height="wrap_content"
@@ -156,8 +155,7 @@
 
         <TextView
             android:id="@+id/categoryTwo_TV"
-            android:text="সর্বাধিক পঠিত"
-            android:textSize="24sp"
+            android:text="@string/campus"
             android:padding="8dp"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -250,12 +248,25 @@
             android:layout_marginRight="8dp"/>
 
         <include
-            android:id="@+id/sevenContent"
-            layout="@layout/review_layout"
+            android:id="@+id/galleryContent"
+            layout="@layout/gallery_content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/sixContent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"/>
+
+
+        <include
+            android:id="@+id/reviewContent"
+            layout="@layout/review_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/galleryContent"
             app:layout_constraintEnd_toEndOf="parent"
             android:layout_marginTop="8dp"
             android:layout_marginLeft="8dp"
@@ -266,7 +277,7 @@
             android:layout_height="wrap_content"
             app:layout_constraintStart_toStartOf="parent"
             android:text="All Rights reserved."
-            app:layout_constraintTop_toBottomOf="@+id/sevenContent" />
+            app:layout_constraintTop_toBottomOf="@+id/reviewContent" />
 
 
 

@@ -1,39 +1,51 @@
 <resources>
     <string name="app_name">BD24Live</string>
-    <string name="national">National</string>
-    <string name="title">Oath on 3rd January</string>
+    <string name="national">জাতীয়</string>
 
-    <string name="navigation_drawer_open">Open navigation drawer</string>
-    <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="openDrawer">open_drawer</string>
-    <string name="closeDrawer">close_drawer</string>
 
-    <!-- Navigation Drawer menu labels -->
-    <string name="nav_home">Home</string>
-    <string name="nav_photos">Photos</string>
-    <string name="nav_movies">Movies</string>
-    <string name="nav_notifications">Notifications</string>
-    <string name="nav_settings">Settings</string>
-    <string name="nav_about_us">About Us</string>
-
-    <!-- Toolbar titles when navigation menu item is selected -->
-    <string-array name="nav_item_activity_titles">
-        <item>Home</item>
-        <item>Photos</item>
-        <item>Movies</item>
-        <item>Notifications</item>
-        <item>Settings</item>
-    </string-array>
-
-    <string name="activity_title_about_us">About Us</string>
-    <string name="activity_title_privacy_policy">Privacy Policy</string>
-    <string name="action_clear_all">Clear All</string>
-    <string name="action_logout">Logout</string>
-    <string name="action_mark_all_read">Mark All as Read</string>
-    <string name="privacy_policy">Privacy Policy</string>
-    <string name="title_activity_nav">NavActivity</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
-    <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
+    <string name="navigation_drawer_open">Drawer open</string>
+    <string name="navigation_drawer_close">Close</string>
+
+    <string name="header">বিগত বছরে দক্ষিণ আফ্রিকায় ১১৭ বাংলাদেশি নিহত</string>
+    <string name="title">প্রবাসী বাংলাদেশির জন্য দক্ষিণ আফ্রিকা দিন দিন অনিরাপদ হয়ে যাচ্ছে।</string>
+    <string name="time">১ মিনিট আগে</string>
+
+
+    <string name="prochoddo">প্রচ্ছদ</string>
+    <string name="jatio">জাতীয়</string>
+    <string name="aiin">আইন ও আদালত</string>
+    <string name="rajniti">রাজনীতি</string>
+    <string name="sharabissho">সারাবিশ্ব</string>
+    <string name="sports">স্পোর্টস</string>
+    <string name="binodon">বিনোদন</string>
+    <string name="probashe">প্রবাসে বাংলা</string>
+    <string name="exclusive">এক্সক্লুসিভ</string>
+    <string name="shastho">স্বাস্থ্য ও চিকিৎসা</string>
+    <string name="onnanno">অন্যান্য</string>
+    <string name="malaysia">মালয়শিয়া</string>
+    <string name="soudi">সৌদি আরব</string>
+    <string name="canada">কানাডা</string>
+    <string name="usa">যুক্তরাষ্ট্র</string>
+    <string name="india">ভারত</string>
+    <string name="katar">কাতার</string>
+    <string name="singapore">সিঙ্গাপুর</string>
+    <string name="life">লাইফ স্টাইল</string>
+    <string name="science">বিজ্ঞান ও প্রযুক্তি</string>
+    <string name="kholakolam">খোলা কলাম</string>
+    <string name="interview">সাক্ষাৎকার</string>
+    <string name="krishi">কৃষি, অর্থ ও বাণিজ্য</string>
+    <string name="vinnokhobor">ভিন্ন স্বাদের খবর</string>
+    <string name="campus">ক্যাম্পাস</string>
+    <string name="tips">টিপস অ্যান্ড ট্রিকস</string>
+    <string name="oporad">অপরাধ</string>
+    <string name="rashifol">রাশিফল</string>
+    <string name="jobs">জবস</string>
+    <string name="dhormo">ধর্ম ও জীবন</string>
+    <string name="bromon">ভ্রমন</string>
+    <string name="photo">ফটো গ্যালারী</string>
+    <string name="vote">অনলাইন ভোট</string>
+    <string name="topic">নতুন বছরে শেয়ারবাজারে সুদিন ফিরবে বলে মনে করেন কি?</string>
+
+
 </resources>

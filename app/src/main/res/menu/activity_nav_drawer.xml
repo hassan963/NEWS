@@ -5,17 +5,75 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:title="জাতীয়" />
+            android:id="@+id/nav_jatio"
+            android:title="@string/jatio" />
         <item
-            android:id="@+id/nav_gallery"
-            android:title="রাজনীতি" />
+            android:id="@+id/nav_rajniti"
+            android:title="@string/rajniti" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:title="সারাবিশ্ব" />
+            android:id="@+id/nav_aiin"
+            android:title="@string/aiin" />
         <item
-            android:id="@+id/nav_manage"
-            android:title="বিনোদন" />
+            android:id="@+id/nav_sharabissho"
+            android:title="@string/sharabissho" />
+        <item
+            android:id="@+id/nav_sports"
+            android:title="@string/sports" />
+        <item
+            android:id="@+id/nav_binodon"
+            android:title="@string/binodon" />
+        <item
+            android:id="@+id/nav_photo"
+            android:title="@string/photo" />
+        <item
+            android:id="@+id/nav_probashe"
+            android:title="@string/probashe" />
+        <item
+            android:id="@+id/nav_exclusive"
+            android:title="@string/exclusive" />
+        <item
+            android:id="@+id/nav_shastho"
+            android:title="@string/shastho" />
+        <item
+            android:id="@+id/nav_life"
+            android:title="@string/life" />
+        <item
+            android:id="@+id/nav_science"
+            android:title="@string/science" />
+        <item
+            android:id="@+id/nav_khola"
+            android:title="@string/kholakolam" />
+        <item
+            android:id="@+id/nav_interview"
+            android:title="@string/interview" />
+        <item
+            android:id="@+id/nav_krishi"
+            android:title="@string/krishi" />
+        <item
+            android:id="@+id/nav_vinno"
+            android:title="@string/vinnokhobor" />
+        <item
+            android:id="@+id/nav_campus"
+            android:title="@string/campus" />
+        <item
+            android:id="@+id/nav_tips"
+            android:title="@string/tips" />
+        <item
+            android:id="@+id/nav_rashifol"
+            android:title="@string/rashifol" />
+        <item
+            android:id="@+id/nav_oporad"
+            android:title="@string/oporad" />
+        <item
+            android:id="@+id/nav_jobs"
+            android:title="@string/jobs" />
+        <item
+            android:id="@+id/nav_dhormo"
+            android:title="@string/dhormo" />
+        <item
+            android:id="@+id/nav_bromon"
+            android:title="@string/bromon" />
+
     </group>
 
 </menu>
