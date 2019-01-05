@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="4dp">
+
+
+    <ImageView
+        android:id="@+id/post_IV"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pictwo"
+        android:paddingBottom="6dp"
+        android:paddingTop="6dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp" />
+
+    <TextView
+        android:id="@+id/title_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/post_IV"
+        android:text="বঙ্গবন্ধুর প্রতিকৃতিতে শ্রদ্ধা জানাল নবনির্বাচিত এমপিরা"
+        android:padding="6dp"
+        android:textSize="16sp"
+        android:textColor="#121010"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/post_IV" />
+
+    <TextView
+        android:id="@+id/time_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/post_IV"
+        android:alpha="0.5"
+        android:layout_below="@id/title_TV"
+        android:text="২৬ মিনিট আগে"
+        android:padding="4dp"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/post_IV" />
+
+    <TextView
+        android:id="@+id/count_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/time_TV"
+        android:layout_alignParentEnd="true"
+        android:layout_toEndOf="@+id/post_IV"
+        android:alpha="0.5"
+        android:text="২৬ মিনিট আগে"
+        android:padding="4dp"
+        android:layout_alignParentRight="true"
+        android:layout_toRightOf="@+id/post_IV" />
+
+    <View
+        android:id="@+id/line_two"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:alpha="0.5"
+        android:background="@color/colorLine"
+        android:layout_below="@id/post_IV"/>
+
+
+</RelativeLayout>

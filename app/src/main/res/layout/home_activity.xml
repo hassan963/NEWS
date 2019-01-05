@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imageOne"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/pictwo" />
+
+            <TextView
+                android:id="@+id/category_image_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/colorAccent"
+                android:text="Politics"
+                app:layout_constraintBottom_toTopOf="@+id/title_image_TV"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/title_image_TV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="Handshake Hasina and Modi"
+                app:layout_constraintBottom_toTopOf="@+id/time_image_TV"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/time_image_TV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="2hrs ago"
+                app:layout_constraintBottom_toBottomOf="@+id/imageOne"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageTwo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/pictwo"
+                app:layout_constraintEnd_toStartOf="@+id/imageThree"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/imageOne" />
+
+            <TextView
+                android:id="@+id/category_image_two_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/colorAccent"
+                android:text="Politics"
+                app:layout_constraintBottom_toTopOf="@+id/title_image_two_TV"
+                app:layout_constraintStart_toStartOf="@+id/imageTwo" />
+
+            <TextView
+                android:id="@+id/title_image_two_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Handshake Hasina and Modi"
+                app:layout_constraintBottom_toBottomOf="@+id/imageTwo"
+                app:layout_constraintEnd_toEndOf="@+id/imageTwo"
+                app:layout_constraintStart_toStartOf="@+id/category_image_two_TV" />
+
+            <ImageView
+                android:id="@+id/imageThree"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/pictwo"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/imageTwo"
+                app:layout_constraintTop_toBottomOf="@+id/imageOne" />
+
+            <TextView
+                android:id="@+id/category_image_three_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                android:background="@color/colorAccent"
+                android:text="Politics"
+                app:layout_constraintBottom_toTopOf="@+id/title_image_three_TV"
+                app:layout_constraintStart_toStartOf="@+id/imageThree" />
+
+            <TextView
+                android:id="@+id/title_image_three_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Handshake Hasina and Modi"
+                app:layout_constraintBottom_toBottomOf="@+id/imageThree"
+                app:layout_constraintEnd_toEndOf="@+id/imageThree"
+                app:layout_constraintStart_toStartOf="@+id/category_image_three_TV" />
+
+
+
+
+            <!--            <LinearLayout
+                android:id="@+id/layoutImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_below="@id/imageOne">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/imageTwo"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:src="@drawable/pictwo"/>
+
+                    <TextView
+                        android:id="@+id/category_image_two_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/title_image_two_TV"
+                        android:layout_alignParentStart="true"
+                        android:background="@color/colorAccent"
+                        android:text="Politics" />
+
+                    <TextView
+                        android:id="@+id/title_image_two_TV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/time_image_two_TV"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:drawableEnd="@id/imageOne"
+                        android:text="Handshake Hasina and Modi" />
+
+                    <TextView
+                        android:id="@+id/time_image_two_TV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="2hrs ago"
+                        android:layout_alignBottom="@+id/imageTwo"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:drawableEnd="@id/imageOne" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/imageThree"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:src="@drawable/pictwo"/>
+
+                    <TextView
+                        android:id="@+id/category_image_three_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/title_image_three_TV"
+                        android:layout_alignParentStart="true"
+                        android:background="@color/colorAccent"
+                        android:text="Politics" />
+
+                    <TextView
+                        android:id="@+id/title_image_three_TV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_above="@+id/time_image_three_TV"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:drawableEnd="@id/imageOne"
+                        android:text="Handshake Hasina and Modi" />
+
+                    <TextView
+                        android:id="@+id/time_image_three_TV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="2hrs ago"
+                        android:layout_alignBottom="@+id/imageThree"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentEnd="true"
+                        android:drawableEnd="@id/imageOne" />
+                </RelativeLayout>
+
+
+            </LinearLayout>-->
+
+
+            <!--            <include
+                android:id="@+id/firstContent"
+                layout="@layout/layout_each_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutImage" />
+
+            <include
+                android:id="@+id/secondContent"
+                layout="@layout/layout_each_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/firstContent" />
+
+            <include
+                android:id="@+id/thirdContent"
+                layout="@layout/layout_each_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/secondContent" />
+
+            <include
+                android:id="@+id/fourContent"
+                layout="@layout/layout_each_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/thirdContent" />
+
+            <include
+                android:id="@+id/fiveContent"
+                layout="@layout/layout_each_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fourContent" />
+
+            <include
+                android:id="@+id/sixContent"
+                layout="@layout/layout_each_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/fiveContent" />-->
+
+        </android.support.constraint.ConstraintLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

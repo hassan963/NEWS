@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/imageOne"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/pictwo" />
+
+
+        <TextView
+            android:id="@+id/category_image_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="2dp"
+            android:background="@color/colorAccent"
+            android:text="জাতীয়"
+            android:padding="2dp"
+            android:textColor="#fff"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toTopOf="@+id/title_image_TV"
+            app:layout_constraintEnd_toEndOf="@id/imageOne"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/imageOne"
+            app:layout_constraintVertical_chainStyle="packed"/>
+
+        <TextView
+            android:id="@+id/title_image_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="বঙ্গবন্ধুর প্রতিকৃতিতে শ্রদ্ধা জানাল নবনির্বাচিত এমপিরা"
+            app:layout_constrainedWidth="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/imageOne"
+            app:layout_constraintBottom_toBottomOf="@+id/imageOne"
+            app:layout_constraintEnd_toEndOf="@id/imageOne"
+            android:textColor="#fff"/>
+
+        <ImageView
+            android:id="@+id/imageTwo"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toStartOf="@+id/imageThree"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageOne"
+            android:src="@drawable/pictwo"/>
+
+        <ImageView
+            android:id="@+id/imageThree"
+            android:layout_width="0dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/imageTwo"
+            app:layout_constraintTop_toBottomOf="@+id/imageOne"
+            android:src="@drawable/pictwo" />
+
+        <TextView
+            android:id="@+id/category_image_two_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="2dp"
+            android:background="@color/colorAccent"
+            android:text="জাতীয়"
+            android:padding="2dp"
+            android:textColor="#fff"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toTopOf="@+id/title_image_two_TV"
+            app:layout_constraintEnd_toEndOf="@id/imageTwo"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/imageTwo"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/title_image_two_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="বঙ্গবন্ধুর প্রতিকৃতিতে শ্রদ্ধা জানাল নবনির্বাচিত এমপিরা"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintStart_toStartOf="@+id/imageTwo"
+            app:layout_constraintBottom_toBottomOf="@+id/imageTwo"
+            app:layout_constraintEnd_toEndOf="@id/imageTwo"
+            android:textColor="#fff"/>
+
+        <TextView
+            android:id="@+id/category_image_three_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginBottom="2dp"
+            android:background="@color/colorAccent"
+            android:text="জাতীয়"
+            android:padding="2dp"
+            android:textColor="#fff"
+            app:layout_constrainedWidth="true"
+            app:layout_constraintBottom_toTopOf="@+id/title_image_three_TV"
+            app:layout_constraintEnd_toEndOf="@id/imageThree"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/imageThree"
+            app:layout_constraintVertical_chainStyle="packed" />
+
+        <TextView
+            android:id="@+id/title_image_three_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="বঙ্গবন্ধুর প্রতিকৃতিতে শ্রদ্ধা জানাল নবনির্বাচিত এমপিরা"
+            app:layout_constrainedWidth="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/imageThree"
+            app:layout_constraintBottom_toBottomOf="@+id/imageThree"
+            app:layout_constraintEnd_toEndOf="@id/imageThree"
+            android:textColor="#fff"/>
+
+        <TextView
+            android:id="@+id/categoryOne_TV"
+            android:text="সর্বশেষ"
+            android:layout_width="0dp"
+            android:textSize="24sp"
+            android:padding="8dp"
+            android:textColor="#fff"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toStartOf="@+id/categoryTwo_TV"
+            app:layout_constraintTop_toBottomOf="@+id/imageTwo"
+            app:layout_constraintStart_toStartOf="parent"
+            android:background="@color/tabColor"/>
+
+        <TextView
+            android:id="@+id/categoryTwo_TV"
+            android:text="সর্বাধিক পঠিত"
+            android:textSize="24sp"
+            android:padding="8dp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/imageTwo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/categoryOne_TV"
+            android:textColor="#000000" />
+
+        <include
+            android:id="@+id/recentContent"
+            layout="@layout/layout_each_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/categoryOne_TV"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <include
+            android:id="@+id/firstContent"
+            layout="@layout/layout_each_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/recentContent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <include
+            android:id="@+id/secondContent"
+            layout="@layout/layout_each_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/firstContent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <include
+            android:id="@+id/thirdContent"
+            layout="@layout/layout_each_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/secondContent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <include
+            android:id="@+id/fourContent"
+            layout="@layout/layout_each_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/thirdContent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <include
+            android:id="@+id/fiveContent"
+            layout="@layout/layout_each_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fourContent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <include
+            android:id="@+id/sixContent"
+            layout="@layout/layout_each_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/fiveContent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <include
+            android:id="@+id/sevenContent"
+            layout="@layout/review_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/sixContent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="All Rights reserved."
+            app:layout_constraintTop_toBottomOf="@+id/sevenContent" />
+
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

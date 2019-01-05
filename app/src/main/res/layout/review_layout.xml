@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/box"
+    android:layout_marginStart="8dp"
+    android:layout_marginEnd="8dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:id="@+id/review_headerTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="অনলাইন ভোট"
+        style="@style/HeaderText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <View
+        android:id="@+id/lineOne"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="4dp"
+        android:alpha="0.5"
+        android:background="@color/colorLine"
+        android:padding="4dp"
+        app:layout_constraintTop_toBottomOf="@id/review_headerTV" />
+
+    <TextView
+        android:id="@+id/details_headerTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginTop="8dp"
+        android:text="নতুন বছরে শেয়ারবাজারে সুদিন ফিরবে বলে মনে করেন কি?"
+        android:textSize="16sp"
+        android:textColor="#0e0e0e"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/lineOne" />
+
+    <CheckBox
+        android:id="@+id/checkBoxOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:hint="হ্যাঁ"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/details_headerTV"
+        android:layout_marginLeft="8dp" />
+
+    <CheckBox
+        android:id="@+id/checkBoxTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:hint="না"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkBoxOne"
+        android:layout_marginLeft="8dp" />
+
+    <CheckBox
+        android:id="@+id/checkBoxThree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:hint="মন্তব্য নেই"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkBoxTwo"
+        android:layout_marginLeft="8dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorAccent"
+        android:text="ভোট দিন"
+        android:textColor="#fff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/checkBoxThree" />
+
+
+</android.support.constraint.ConstraintLayout>
