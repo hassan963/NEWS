@@ -1,10 +1,13 @@
 package com.example.primexsystems.demoproject;
 
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.support.constraint.Group;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -14,16 +17,26 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.ExpandableListView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.primexsystems.demoproject.home.adapter.ContentAdapter;
+import com.example.primexsystems.demoproject.home.adapter.ExpandableListAdapter;
+import com.example.primexsystems.demoproject.home.model.MenuModel;
 import com.example.primexsystems.demoproject.home.model.NewsItem;
+import com.github.mikephil.charting.charts.BarChart;
+import com.github.mikephil.charting.components.XAxis;
+import com.github.mikephil.charting.data.BarData;
+import com.github.mikephil.charting.data.BarDataSet;
+import com.github.mikephil.charting.data.BarEntry;
+import com.github.mikephil.charting.utils.ColorTemplate;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
-
 import ss.com.bannerslider.banners.Banner;
 import ss.com.bannerslider.banners.DrawableBanner;
 import ss.com.bannerslider.banners.RemoteBanner;
@@ -41,8 +54,15 @@ import ss.com.bannerslider.views.BannerSlider;
     প্রবাসে বাংলা
     এক্সক্লুসিভ * */
 
+   //https://www.journaldev.com/19375/android-expandablelistview-navigationview
+
 public class NavActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
+
+    ExpandableListAdapter expandableListAdapter;
+    ExpandableListView expandableListView;
+    List<MenuModel> headerList = new ArrayList<>();
+    HashMap<MenuModel, List<MenuModel>> childList = new HashMap<>();
 
 
     @Override
@@ -60,11 +80,17 @@ public class NavActivity extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+        toggle.getDrawerArrowDrawable().setColor(getResources().getColor(R.color.tabColor));
+
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
         TextView categoryOne_TV = findViewById(R.id.categoryOne_TV);
         TextView categoryTwo_TV = findViewById(R.id.categoryTwo_TV);
+
+        expandableListView = findViewById(R.id.expandableListView);
+        prepareMenuData();
+        populateExpandableList();
 
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/solaimanlipinormal.ttf");
         categoryOne_TV.setTypeface(typeface); categoryTwo_TV.setTypeface(typeface);
@@ -75,6 +101,156 @@ public class NavActivity extends AppCompatActivity
         initializeFields(); reviewContent();
         recentContentInit(); firstContentInit(); secondContentInit(); thirdContentInit();
         fourContentInit(); fiveContentInit(); sixContentInit(); galleryContentInit();
+    }
+
+    private void prepareMenuData() {
+
+        MenuModel menuModel = new MenuModel(getString(R.string.jatio), true, false,
+                "0"); //Menu of Android Tutorial. No sub menus
+        headerList.add(menuModel);
+        menuModel = new MenuModel(getString(R.string.rajniti), true, false,
+                "1");
+        headerList.add(menuModel);
+        menuModel = new MenuModel(getString(R.string.aiin), true, false,
+                "2");
+        headerList.add(menuModel);
+        menuModel = new MenuModel(getString(R.string.sharabissho), true, false,
+                "3");
+        headerList.add(menuModel);
+        menuModel = new MenuModel(getString(R.string.sports), true, false,
+                "4");
+        headerList.add(menuModel);
+        menuModel = new MenuModel(getString(R.string.binodon), true, false,
+                "5");
+        headerList.add(menuModel);
+        menuModel = new MenuModel(getString(R.string.photo), true, false,
+                "6");
+        headerList.add(menuModel);
+
+        if (!menuModel.hasChildren) {
+            childList.put(menuModel, null);
+        }
+
+        menuModel = new MenuModel(getString(R.string.probashe), true, true,
+                "7");
+        headerList.add(menuModel);
+
+        List<MenuModel> childModelsList = new ArrayList<>();
+        MenuModel childModel = new MenuModel("মালয়েশিয়া", false, false, "23");
+        childModelsList.add(childModel);
+        childModel = new MenuModel("সৌদি আরব", false, false, "24");
+        childModelsList.add(childModel);
+        childModel = new MenuModel("কানাডা", false, false, "25");
+        childModelsList.add(childModel);
+        childModel = new MenuModel("যুক্তরাষ্ট্র", false, false, "26");
+        childModelsList.add(childModel);
+        childModel = new MenuModel("ভারত", false, false, "27");
+        childModelsList.add(childModel);
+        childModel = new MenuModel("কাতার", false, false, "28");
+        childModelsList.add(childModel);
+        childModel = new MenuModel("সিঙ্গাপুর", false, false, "29");
+        childModelsList.add(childModel);
+
+
+
+        if (menuModel.hasChildren) {
+            Log.d("API123","here");
+            childList.put(menuModel, childModelsList);
+        }
+
+
+        menuModel = new MenuModel(getString(R.string.exclusive), true, false,
+                "8");
+        headerList.add(menuModel);
+        menuModel = new MenuModel(getString(R.string.shastho), true, false,
+                "9");
+        headerList.add(menuModel);
+        menuModel = new MenuModel(getString(R.string.life), true, false,
+                "10");
+        headerList.add(menuModel);
+        menuModel = new MenuModel(getString(R.string.science), true, false,
+                "11");
+        headerList.add(menuModel);
+        menuModel = new MenuModel(getString(R.string.kholakolam), true, false,
+                "12");
+        headerList.add(menuModel);
+        menuModel = new MenuModel(getString(R.string.interview), true, false,
+                "13");
+        headerList.add(menuModel);
+        menuModel = new MenuModel(getString(R.string.krishi), true, false,
+                "14");
+        headerList.add(menuModel);
+        menuModel = new MenuModel(getString(R.string.vinnokhobor), true, false,
+                "15");
+        headerList.add(menuModel);
+        menuModel = new MenuModel(getString(R.string.campus), true, false,
+                "16");
+        headerList.add(menuModel);
+        menuModel = new MenuModel(getString(R.string.tips), true, false,
+                "17");
+        headerList.add(menuModel);
+        menuModel = new MenuModel(getString(R.string.rashifol), true, false,
+                "18");
+        headerList.add(menuModel);
+        menuModel = new MenuModel(getString(R.string.oporad), true, false,
+                "19");
+        headerList.add(menuModel);
+        menuModel = new MenuModel(getString(R.string.jobs), true, false,
+                "20");
+        headerList.add(menuModel);
+        menuModel = new MenuModel(getString( R.string.dhormo), true, false,
+                "21");
+        headerList.add(menuModel);
+        menuModel = new MenuModel(getString(R.string.bromon), true, false,
+                "22");
+        headerList.add(menuModel);
+
+        if (!menuModel.hasChildren) {
+            childList.put(menuModel, null);
+        }
+
+
+    }
+
+    private void populateExpandableList(){
+
+
+        expandableListAdapter = new ExpandableListAdapter(this, headerList, childList);
+        expandableListView.setAdapter(expandableListAdapter);
+
+        expandableListView.setOnGroupClickListener(new ExpandableListView.OnGroupClickListener() {
+            @Override
+            public boolean onGroupClick(ExpandableListView parent, View v, int groupPosition, long id) {
+
+                if (headerList.get(groupPosition).isGroup) {
+                    if (!headerList.get(groupPosition).hasChildren) {
+
+                        Toast.makeText(NavActivity.this, headerList.get(groupPosition).position, Toast.LENGTH_SHORT).show();
+
+                        onBackPressed();
+                    }
+                }
+
+                return false;
+            }
+        });
+
+        expandableListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {
+            @Override
+            public boolean onChildClick(ExpandableListView parent, View v, int groupPosition, int childPosition, long id) {
+
+                if (childList.get(headerList.get(groupPosition)) != null) {
+                    MenuModel model = childList.get(headerList.get(groupPosition)).get(childPosition);
+                    if (model.position.length() > 0) {
+                        Toast.makeText(NavActivity.this, model.position, Toast.LENGTH_SHORT).show();
+                        onBackPressed();
+                    }
+                }
+
+                return false;
+            }
+        });
+
     }
 
     private void initializeFields() {
@@ -346,7 +522,7 @@ public class NavActivity extends AppCompatActivity
 
         BannerSlider bannerSlider = (BannerSlider) findViewById(R.id.banner_slider1);
         List<Banner> banners=new ArrayList<Banner>();
-        //add banner using image url
+        //add banner using image position
         /*banners.add(new RemoteBanner("https://www.designbold.com/blog/wp-content/uploads/13-3.png"));
         banners.add(new RemoteBanner("http://www.samlevitz.com/wp-content/uploads/2016/04/Top-row-financing_AnniversarySale18.jpg"));
         banners.add(new RemoteBanner("https://23199848a6c7c6f6d65e-7fa6dd85c3b05df08cb38b85e7548f1b.ssl.cf2.rackcdn.com/2017afbfimg1.jpg"));*/
@@ -358,10 +534,86 @@ public class NavActivity extends AppCompatActivity
 
     private void reviewContent(){
         TextView review_headerTV, details_headerTV;
+        Button vote_button = findViewById(R.id.vote_button);
+        final Group group_review = findViewById(R.id.group_review);
+        final BarChart barChart = (BarChart) findViewById(R.id.barchart);
         review_headerTV = findViewById(R.id.review_headerTV);
         details_headerTV = findViewById(R.id.details_headerTV);
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/solaimanlipinormal.ttf");
         review_headerTV.setTypeface(typeface); details_headerTV.setTypeface(typeface);
+
+       // barChart.setVisibility(View.VISIBLE);
+       // barChart.setMaxVisibleValueCount(60);
+        barChart.setTouchEnabled(false);
+        barChart.setPinchZoom(false);
+
+        barChart.setDrawBarShadow(false);
+        barChart.setDrawGridBackground(false);
+        barChart.setDescription("");
+
+        BarData data = new BarData(getXAxisValues(), getDataSet());
+        barChart.setData(data);
+        //barChart.setDescription("My Chart");
+        barChart.animateXY(2000, 2000);
+        barChart.invalidate();
+        barChart.getXAxis().setDrawGridLines(false);
+        barChart.getAxisLeft().setDrawGridLines(false);
+        barChart.getAxisRight().setDrawGridLines(false);
+        barChart.getAxisRight().setDrawLabels(false);
+        barChart.getLegend().setEnabled(false);
+
+
+
+
+        vote_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                group_review.setVisibility(View.GONE);
+                barChart.setVisibility(View.VISIBLE);
+            }
+        });
+
+    }
+
+    private ArrayList<BarDataSet> getDataSet(){
+
+        ArrayList<BarDataSet> dataSets = null;
+
+        /*ArrayList<BarEntry> valueSet1 = new ArrayList<>();
+        BarEntry v1e1 = new BarEntry(110.000f, 0); // Jan
+        valueSet1.add(v1e1);
+        BarEntry v1e2 = new BarEntry(40.000f, 1); // Feb
+        valueSet1.add(v1e2);
+        BarEntry v1e3 = new BarEntry(60.000f, 2); // Mar
+        valueSet1.add(v1e3);*/
+
+        ArrayList<BarEntry> valueSet2 = new ArrayList<>();
+        BarEntry v2e1 = new BarEntry(150.000f, 0); // Jan
+        valueSet2.add(v2e1);
+        BarEntry v2e2 = new BarEntry(90.000f, 1); // Feb
+        valueSet2.add(v2e2);
+        BarEntry v2e3 = new BarEntry(120.000f, 2); // Mar
+        valueSet2.add(v2e3);
+
+        /*BarDataSet barDataSet1 = new BarDataSet(valueSet1, "Brand 1");
+        barDataSet1.setColor(Color.rgb(0, 155, 0));*/
+        BarDataSet barDataSet2 = new BarDataSet(valueSet2, "");
+        barDataSet2.setColors(ColorTemplate.COLORFUL_COLORS);
+
+        dataSets = new ArrayList<>();
+       // dataSets.add(barDataSet1);
+        dataSets.add(barDataSet2);
+        return dataSets;
+
+
+    }
+
+    private ArrayList<String> getXAxisValues() {
+        ArrayList<String> xAxis = new ArrayList<>();
+        xAxis.add("হ্যাঁ");
+        xAxis.add("না");
+        xAxis.add("মন্তব্য নেই");
+        return xAxis;
     }
 
 
@@ -374,6 +626,7 @@ public class NavActivity extends AppCompatActivity
         return newsItems;
 
     }
+
 
     private void changeFragment(int id){
         TestFragment fragment = new TestFragment();

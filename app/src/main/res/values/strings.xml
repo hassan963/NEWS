@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">BD24Live</string>
+    <string name="app_name">bd24live.com</string>
     <string name="national">জাতীয়</string>
 
 
@@ -46,6 +46,10 @@
     <string name="photo">ফটো গ্যালারী</string>
     <string name="vote">অনলাইন ভোট</string>
     <string name="topic">নতুন বছরে শেয়ারবাজারে সুদিন ফিরবে বলে মনে করেন কি?</string>
+    <string name="yes">হ্যাঁ</string>
+    <string name="no">না</string>
+    <string name="no_comment">মন্তব্য নেই</string>
+    <string name="give_vote">ভোট দিন</string>
 
 
 </resources>
